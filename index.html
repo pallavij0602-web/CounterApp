@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Counter - Mini Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="counter-card">
+        <h1>TAP COUNTER</h1>
+        <div id="count">0</div>
+        
+        <div class="button-group">
+            <button onclick="changeCount(-1)">−</button>
+            <button onclick="changeCount(1)">+</button>
+        </div>
+
+        <button class="reset-btn" onclick="resetCount()">Reset Progress</button>
+    </div>
+
+    <script>
+        let count = 0;
+        const countDisplay = document.getElementById('count');
+
+        function changeCount(value) {
+            count += value;
+            countDisplay.innerText = count;
+        }
+
+        function resetCount() {
+            count = 0;
+            countDisplay.innerText = count;
+        }
+    </script>
+</body>
+</html>
